@@ -9,12 +9,24 @@ import { IoMdSettings } from "react-icons/io";
 import { FiMessageSquare } from "react-icons/fi";
 
 export default function SideBar() {
+  const handleMenu = () => {
+    let sideBar = document.querySelector('#sidebar');
+    if (sideBar.classList.contains('sidebar-open')){
+      sideBar.classList.remove('sidebar-open');
+      sideBar.classList.add('sidebar');
+    }else{
+      sideBar.classList.add('sidebar-open');
+      sideBar.classList.remove('sidebar');
+    }
+    
+  }
     
   return (
-    <div className="sidebar">
-      <HiMenuAlt3 className="menu-bar" />
+    <div className="sidebar-open" id="sidebar">
+      <HiMenuAlt3 className="menu-bar" onClick={handleMenu}/>
       <div className="new-chat">
         <button><FaPlus/> New Chat</button>
+        <FaPlus className="add-icon" style={{display:'none'}}/>
       </div>
 
       <div className="recent-chats">
@@ -29,22 +41,22 @@ export default function SideBar() {
 
       <div className="footer-section">
         <div className="footer-icons">
-          <FaGem/>
+          <FaGem className="icon"/>
           <span>Gem Manager</span>
         </div>
 
         <div className="footer-icons">
-          <FiHelpCircle />
+          <FiHelpCircle className="icon" />
           <span>Help</span>
         </div>
 
         <div className="footer-icons">
-          <FaHistory />
+          <FaHistory className="icon" />
           <span>History</span>
         </div>
 
         <div className="footer-icons">
-          <IoMdSettings />
+          <IoMdSettings className="icon" />
           <span>Settings</span>
         </div>
 

@@ -1,10 +1,11 @@
 .sidebar{
     width: 300px;
     height: 100vh;
-    background-color: #333;
+    background-color: #222;
     display: flex;
     flex-direction: column;
     transition: 0.3s;
+    position: relative;
 }
 
 .menu-bar{
@@ -81,7 +82,7 @@
 .sidebar-open{
     width: 90px;
     height: 100vh;
-    background-color: #000;
+    background-color: #111;
     transition: 0.3s;
 }
 
@@ -116,7 +117,7 @@
 }
 
 .sidebar-open .footer-section{
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
 }

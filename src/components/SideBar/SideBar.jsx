@@ -63,7 +63,7 @@ export default function SideBar() {
       </div>
 
       <div className="footer-section-2">
-        <p>Visakhapatnam, Andhra Pradesh, <br /> India</p>
+        <p>Visakhapatnam, Andhra Pradesh, India</p>
       </div>
     </div>
   );

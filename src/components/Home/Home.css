@@ -105,6 +105,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
 }
 
 .home-main .main-content .main-content-chats .chat-box .chat-box-message{

@@ -6,7 +6,8 @@ import { MdOutlineArrowDropDown } from "react-icons/md";
 import { FaCrown } from "react-icons/fa";
 import { CgMenuGridO } from "react-icons/cg";
 
-const apiKey = "AIzaSyC0SlHnXpBVMmpAxKObYdzh5CIa6BXeJoY";
+const apiKey = import.meta.env.VITE_API_KEY;
+console.log(apiKey);
 const genAI = new GoogleGenerativeAI(apiKey);
 
 export default function Home() {
